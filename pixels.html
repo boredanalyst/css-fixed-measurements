@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+    <head>
+        <meta charset="utf-8">
+        <title>CSS Measurements</title>
+        <style>
+            * {
+                font-family:Arial, Helvetica, sans-serif;
+            }
+
+            body {
+                display:flex;
+            }
+
+            h1 {
+                font-size:13vh;
+                margin-bottom:0;
+            }
+
+            h3 {
+                font-size:5vh;
+                text-align:center;
+            }
+
+            main {
+                margin:auto;
+                width:60%;
+            }
+
+            p:has(+ section) {
+                text-align:center;
+                font-size:2vh;
+            }
+
+            article section {
+                background-color:red;
+                display:inline-block;
+                text-align:center;
+                padding:1vh;
+                color:white;
+            }
+
+            article section:first-of-type {
+                float:left;
+                width:300px;
+                font-size:20px;
+            }
+
+            article section:nth-of-type(2) {
+                float:right;
+                width:400px;
+                font-size:12px;
+            }
+
+            
+
+        </style>
+    </head>
+    <body>
+        <main>
+            <article>
+                <h1>CSS Measurements</h1>
+                <p>CSS Measurements may vary depending upon the values used.</p>
+                <hr align="center" width="50%">
+                <h3>Pixels</h3>
+                <p>One pixel is measured at a <strong>1/96 of an inch.</strong></p>
+                <section>
+                    <p>I am the first element.</p>
+                    <p>I am <code>300px</code> wide and I have a fontsize of <code>20px</code></p>
+                </section>
+                <section>
+                    <p>I am the second element.</p>
+                    <p>I am <code>400px</code> wide and I have a fontsize of <code>12px</code></p>
+                </section>
+            </article>
+        </main>
+    </body>
+
+</html>
